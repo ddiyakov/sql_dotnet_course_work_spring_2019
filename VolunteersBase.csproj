@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{399149BC-2FD0-42EB-9C51-824AB62EA081}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>VolunteersBase</RootNamespace>
+    <AssemblyName>VolunteersBase</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Coordination.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Coordination.Designer.cs">
+      <DependentUpon>Coordination.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CoordinatorEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CoordinatorEdit.Designer.cs">
+      <DependentUpon>CoordinatorEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CoordinatorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CoordinatorForm.Designer.cs">
+      <DependentUpon>CoordinatorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CoordinatorTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CoordinatorTable.Designer.cs">
+      <DependentUpon>CoordinatorTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrganizatorClasses\AppointmentsTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrganizatorClasses\AppointmentsTable.Designer.cs">
+      <DependentUpon>AppointmentsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrganizatorClasses\CompaniesTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrganizatorClasses\CompaniesTable.Designer.cs">
+      <DependentUpon>CompaniesTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrganizatorClasses\DocsTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrganizatorClasses\DocsTable.Designer.cs">
+      <DependentUpon>DocsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrganizatorClasses\EventsTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrganizatorClasses\EventsTable.Designer.cs">
+      <DependentUpon>EventsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrganizatorTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrganizatorTable.Designer.cs">
+      <DependentUpon>OrganizatorTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrganizatorClasses\WorkersTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrganizatorClasses\WorkersTable.Designer.cs">
+      <DependentUpon>WorkersTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsersClasses\DBSQLServerUtils.cs" />
+    <Compile Include="MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrganizatorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrganizatorForm.Designer.cs">
+      <DependentUpon>OrganizatorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsersClasses\UserCoordinator.cs" />
+    <Compile Include="UsersClasses\UserOrganizator.cs" />
+    <Compile Include="UsersClasses\UserVolunteer.cs" />
+    <Compile Include="VolunteerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VolunteerForm.Designer.cs">
+      <DependentUpon>VolunteerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VolunteersList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VolunteersList.Designer.cs">
+      <DependentUpon>VolunteersList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VolunteerTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VolunteerTable.Designer.cs">
+      <DependentUpon>VolunteerTable.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Coordination.resx">
+      <DependentUpon>Coordination.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CoordinatorEdit.resx">
+      <DependentUpon>CoordinatorEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CoordinatorForm.resx">
+      <DependentUpon>CoordinatorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CoordinatorTable.resx">
+      <DependentUpon>CoordinatorTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrganizatorClasses\AppointmentsTable.resx">
+      <DependentUpon>AppointmentsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrganizatorClasses\CompaniesTable.resx">
+      <DependentUpon>CompaniesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrganizatorClasses\DocsTable.resx">
+      <DependentUpon>DocsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrganizatorClasses\EventsTable.resx">
+      <DependentUpon>EventsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrganizatorClasses\WorkersTable.resx">
+      <DependentUpon>WorkersTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrganizatorForm.resx">
+      <DependentUpon>OrganizatorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrganizatorTable.resx">
+      <DependentUpon>OrganizatorTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="VolunteerForm.resx">
+      <DependentUpon>VolunteerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VolunteersList.resx">
+      <DependentUpon>VolunteersList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VolunteerTable.resx">
+      <DependentUpon>VolunteerTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
